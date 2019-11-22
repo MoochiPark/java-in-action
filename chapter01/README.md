@@ -76,7 +76,7 @@ inventory.sort(comparing(Apple::getWeight));
 
 
 
-자바 8 기법은 **함수형 프로그래밍**^functional-style^ ^programming^에서 위력을 발휘한다.
+자바 8 기법은 **함수형 프로그래밍**<sup>functional-style programming</sup>에서 위력을 발휘한다.
 
 코드를 전달하거나 조합해서 강력한 프로그래밍 도구로 활용할 수 있다는 것을 이 책에서 배울 수 있다.
 
@@ -124,7 +124,7 @@ inventory.sort(comparing(Apple::getWeight));
 
 자바 8 이전의 자바에서는 메서드를 전달할 방법이 없었지만, 자바 8에서는 메서드를 다른 메서드의 인수로 넘겨주는 기능을 제공한다.
 
-이러한 기능을   이론적으로 **동작 파라미터화**^behavior^ ^parameterization^라고 부른다.
+이러한 기능을   이론적으로 **동작 파라미터화**<sup>behavior parameterization</sup>라고 부른다.
 
 
 
@@ -147,7 +147,7 @@ public static void main(String[] args) {
 동적 파라미터화가 왜 중요할까? `compareUsingCustomerId`를 이용해 sort의 동작을 파라미터화 했던 것 처럼
 스트림 API는 연산의 동작을 파라미터화 할 수 있는 코드를 전달한다는 사상에 기초하기 때문이다.
 
-![image-20191121022422457](C:\Users\Admin\AppData\Roaming\Typora\typora-user-images\image-20191121022422457.png)
+![c01_01](C:\Users\Admin\git\github\java-in-action\resources\c01_01.png)
 
 
 
@@ -159,9 +159,9 @@ public static void main(String[] args) {
 
 **스트림 메서드로 전달하는 코드는 다른 코드와 동시에 실행하더라도 안전하게 실행될 수 있어야 한다.**
 
-그러기 위해서는 공유된 가변 데이터^shared^ ^mutable^ ^data^에 접근하지 않아야 한다.
+그러기 위해서는 공유된 가변 데이터<sup>shared mutable data</sup>에 접근하지 않아야 한다.
 
-> 이러한 함수를 **순수^pure^ 함수**, **부작용 없는^side-effect-free^ 함수**, **상태 없는^stateless^ 함수**라 부른다. (18, 19장)
+> 이러한 함수를 **순수<sup>pure</sup> 함수**, **부작용 없는<sup>side-effect-free</sup> 함수**, **상태 없는<sup>stateless</sup> 함수**라 부른다. (18, 19장)
 
 지금까지는 독립적으로 실행될 수 있는 다중 코드 사본과 관련된 병렬성을 고려했다.
 
@@ -173,7 +173,7 @@ public static void main(String[] args) {
 
 
 
-**공유되지 않은 가변 데이터^no-shared-mutable-data^**, **메서드나 함수 코드를 다른 메서드로 전달**하는 두 가지 기능은
+**공유되지 않은 가변 데이터<sup>no-shared-mutable-data</sup>**, **메서드나 함수 코드를 다른 메서드로 전달**하는 두 가지 기능은
 
 **함수형 프로그래밍** 패러다임의 핵심적인 사항이다.
 
@@ -189,7 +189,7 @@ public static void main(String[] args) {
 
 ## 1.3 자바 함수
 
-프로그래밍 언어에서 **함수^function^**라는 용어는 **메서드^method^** 특히 정적 메서드^static-method^와 같은 의미로 사용된다.
+프로그래밍 언어에서 **함수<sup>function</sup>**라는 용어는 **메서드<sup>method</sup>** 특히 정적 메서드<sup>static-method</sup>와 같은 의미로 사용된다.
 
 자바의 함수는 이에더해 **수학적인 함수**처럼 사용되며 부작용을 일으키지 않는 함수를 의미한다.
 
@@ -200,9 +200,9 @@ public static void main(String[] args) {
 - 기본 값 : 42(int), 3.14(double) 등
 - 객체 : new, 팩토리 메서드, 라이브러리 함수를 통해 객체의 값을 얻을 수 있다.
 
-객체 참조는 클래스의 **인스턴스^instance^**를 가리킨다. 다양한 방법으로 객체 참조를 얻을 수 있다.
+객체 참조는 클래스의 **인스턴스<sup>instance</sup>**를 가리킨다. 다양한 방법으로 객체 참조를 얻을 수 있다.
 
-그런데 왜 함수가 필요할까? 프로그래밍 언어의 핵심은 값을 바꾸는 것이다. 그리고 전통적으로 프로그래밍 언어에서는 이 바꿀 수 있는 값을 **일급^first-class^값** (또는 일급 시민)이라고 부른다.  (위의 값들은 모두 일급 값)
+그런데 왜 함수가 필요할까? 프로그래밍 언어의 핵심은 값을 바꾸는 것이다. 그리고 전통적으로 프로그래밍 언어에서는 이 바꿀 수 있는 값을 **일급<sup>first-class</sup>값** (또는 일급 시민)이라고 부른다.  (위의 값들은 모두 일급 값)
 
 자바 언어의 다양한 구조체(메서드, 클래스)가 값의 구조를 표현하는데 도움이 될 수 있다.
 
@@ -224,7 +224,7 @@ public static void main(String[] args) {
 
 
 
-첫 번째로 **메서드 참조^method-reference^**를 알아보자.
+첫 번째로 **메서드 참조<sup>method-reference</sup>**를 알아보자.
 
 
 
@@ -258,7 +258,7 @@ File[] hiddenFiles = new File(".").listFiles(File::isHidden);
 
 #### 람다 : 익명 함수
 
-자바 8에서는 메서드를 일급값으로 취급할 뿐 아니라 **람다**(또는 익명 함수^annonymous-function^)를 포함하여 함수도 값으로 취급할 수 있다. 
+자바 8에서는 메서드를 일급값으로 취급할 뿐 아니라 **람다**(또는 익명 함수<sup>annonymous-function</sup>)를 포함하여 함수도 값으로 취급할 수 있다. 
 
 이용할 수 있는 편리한 클래스나 메서드가 없을 때 새로운 람다 문법을 이용하면 간결한 코드를 구현할 수 있다.
 
@@ -296,7 +296,7 @@ File[] hiddenFiles = new File(".").listFiles(File::isHidden);
 ![image-20191121171550526](C:\Users\Admin\AppData\Roaming\Typora\typora-user-images\image-20191121171550526.png)
 
 스트림 API를 이용하면 루프를 신경 쓸 필요가 없다. 모든 데이터가 라이브러리 내부에서 처리되기 때문이다.
-이와 같은 반복을 **내부 반복^internal-iteration^**이라고 한다.
+이와 같은 반복을 **내부 반복<sup>internal-iteration</sup>**이라고 한다.
 
 이론적으로 8개 코어를 가졌다면 병렬로 작업을 수행하여 단일 CPU 컴퓨터에 비해 8배 빨리 처리할 수 있다.
 
@@ -381,11 +381,11 @@ File[] hiddenFiles = new File(".").listFiles(File::isHidden);
 
 
 
-- 자바 12의 switch
+- 자바 12의 switch 패턴 매칭
 
-   http://blog.naver.com/PostView.nhn?blogId=kgw1988&logNo=221478447511&categoryNo=33&parentCategoryNo=0&viewDate=&currentPage=1&postListTopCurrentPag 
-
-  
+   [Reve님의 블로그](http://blog.naver.com/PostView.nhn?blogId=kgw1988&logNo=221478447511&categoryNo=33&parentCategoryNo=0&viewDate=&currentPage=1&postListTopCurrentPag)
+   
+     
 
 # 1.7. 마치며
 
@@ -393,7 +393,5 @@ File[] hiddenFiles = new File(".").listFiles(File::isHidden);
 - 자바 8의 스트림 개념 중 일부는 컬렉션에서 가져온 것이다. **스트림과 컬렉션을 적절하게 활용하면 스트림의 인수를 병렬로 처리할 수 있으며 더 가독성이 좋은 코드를 구현할 수 있다.**
 - 자바 9에서는 **모듈을 이용해 시스템의 구조를 만들 수 있고 디폴트 메소드를 이용해 기존 인터페이스를 구현하는 클래스를 바꾸지 않고도 인터페이스를 변경할 수 있다.**
 - 함수형 프로그래밍에서 **null 처리 방법과 패턴 매칭 활용** 등 흥미로운 기법을 발견했다.
-
-- C, C++ 는 프로그래밍 안전성은 부족하지만 작은 런타임 풋프린트(footprint) 덕분에 운영체제와 다양한 임베디드 시스템에서 여전히 인기를 끌고 있다. 하지만 C, C++의 낮은 안정성 때문에 프로그램이 예기치 않게 종료되거나 바이러스 등이 침투할 수 있는 보안 구멍이 있을 수 있다.
 
 - 자바는 지난 1995년 첫 베타 버전이 공개된 이후로 경쟁 언어로 대신하며 커다란 생태계를 성공적으로 구축했다.
