@@ -147,7 +147,8 @@ public static void main(String[] args) {
 동적 파라미터화가 왜 중요할까? `compareUsingCustomerId`를 이용해 sort의 동작을 파라미터화 했던 것 처럼
 스트림 API는 연산의 동작을 파라미터화 할 수 있는 코드를 전달한다는 사상에 기초하기 때문이다.
 
-![c01_01](C:\Users\Admin\git\github\java-in-action\resources\c01_01.png)
+
+![c01_01](https://github.com/MoochiPark/java-in-action/blob/master/resources/c01_01.png)
 
 
 
@@ -264,7 +265,8 @@ File[] hiddenFiles = new File(".").listFiles(File::isHidden);
 
 람다 문법 형식으로 구현된 프로그램을 함수형 프로그래밍, 즉 '함수를 일급 값으로 넘겨주는 프로그램'이라 한다.
 
-![image-20191121163526387](C:\Users\Admin\AppData\Roaming\Typora\typora-user-images\image-20191121163526387.png)
+
+![image-20191121163526387](https://github.com/MoochiPark/java-in-action/blob/master/resources/c01_02.png)
 
 
 
@@ -289,11 +291,11 @@ File[] hiddenFiles = new File(".").listFiles(File::isHidden);
 
 거의 모든 자바 애플리케이션은 컬렉션을 만들고 활용한다. 하지만 다음 코드처럼 많은 기본 코드를 구현해야 한다
 
-![image-20191121171510859](C:\Users\Admin\AppData\Roaming\Typora\typora-user-images\image-20191121171510859.png)
+![image-20191121171510859](https://github.com/MoochiPark/java-in-action/blob/master/resources/c01_03.png)
 
 스트림 API를 이용하면 다음처럼 해결할 수 있다.
 
-![image-20191121171550526](C:\Users\Admin\AppData\Roaming\Typora\typora-user-images\image-20191121171550526.png)
+![image-20191121171550526](https://github.com/MoochiPark/java-in-action/blob/master/resources/c01_04.png)
 
 스트림 API를 이용하면 루프를 신경 쓸 필요가 없다. 모든 데이터가 라이브러리 내부에서 처리되기 때문이다.
 이와 같은 반복을 **내부 반복<sup>internal-iteration</sup>**이라고 한다.
@@ -310,7 +312,7 @@ File[] hiddenFiles = new File(".").listFiles(File::isHidden);
   - 데이터를 **필터링(filtering)** 하거나 데이터를 **추출(extracting)** 하거나, 데이터를 **그룹화(grouping)** 하는 등의 기능
   - 한 CPU는 리스트의 앞부분을 처리하고, 다른 CPU는 리스트의 뒷부분을 처리하는 **포킹 단계(forking step)** 기능 마지막으로 하나의 CPU가 두 결과를 정리한다.
 
-![image-20191121194037154](C:\Users\Admin\AppData\Roaming\Typora\typora-user-images\image-20191121194037154.png)
+![image-20191121194037154](https://github.com/MoochiPark/java-in-action/blob/master/resources/c01_05.png)
 
 - **순차 처리 방식 코드**
 
@@ -393,5 +395,3 @@ File[] hiddenFiles = new File(".").listFiles(File::isHidden);
 - 자바 8의 스트림 개념 중 일부는 컬렉션에서 가져온 것이다. **스트림과 컬렉션을 적절하게 활용하면 스트림의 인수를 병렬로 처리할 수 있으며 더 가독성이 좋은 코드를 구현할 수 있다.**
 - 자바 9에서는 **모듈을 이용해 시스템의 구조를 만들 수 있고 디폴트 메소드를 이용해 기존 인터페이스를 구현하는 클래스를 바꾸지 않고도 인터페이스를 변경할 수 있다.**
 - 함수형 프로그래밍에서 **null 처리 방법과 패턴 매칭 활용** 등 흥미로운 기법을 발견했다.
-
-- 자바는 지난 1995년 첫 베타 버전이 공개된 이후로 경쟁 언어로 대신하며 커다란 생태계를 성공적으로 구축했다.
