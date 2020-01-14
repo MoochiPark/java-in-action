@@ -43,7 +43,7 @@
 
   ##### 리팩터링, 테스팅, 디버깅
 
- #### [Presentation]( https://github.com/MoochiPark/java-in-action/tree/master/presentation )
+- #### [Presentation]( https://github.com/MoochiPark/java-in-action/tree/master/presentation )
 
 
 ## *Made by*
